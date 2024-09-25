@@ -538,6 +538,8 @@ export function isCancel(value: any): value is Cancel;
 
 export function all<T>(values: Array<T | Promise<T>>): Promise<T[]>;
 
+export function mergeConfig<D = any>(config1: AxiosRequestConfig, config2?: AxiosRequestConfig<D>): AxiosRequestConfig<D>;
+
 export interface AxiosStatic extends AxiosInstance {
   create(config?: CreateAxiosDefaults): AxiosInstance;
   Cancel: CancelStatic;
@@ -552,6 +554,7 @@ export interface AxiosStatic extends AxiosInstance {
   isAxiosError: typeof isAxiosError;
   toFormData: typeof toFormData;
   formToJSON: typeof formToJSON;
+  mergeConfig: typeof mergeConfig;
   getAdapter: typeof getAdapter;
   CanceledError: typeof CanceledError;
   AxiosHeaders: typeof AxiosHeaders;
