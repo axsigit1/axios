@@ -212,7 +212,7 @@ export type ResponseType =
     | 'stream'
     | 'formdata';
 
-export type responseEncoding =
+export type ResponseEncoding =
     | 'ascii' | 'ASCII'
     | 'ansi' | 'ANSI'
     | 'binary' | 'BINARY'
@@ -329,7 +329,7 @@ export interface AxiosRequestConfig<D = any> {
   adapter?: AxiosAdapterConfig | AxiosAdapterConfig[];
   auth?: AxiosBasicCredentials;
   responseType?: ResponseType;
-  responseEncoding?: responseEncoding | string;
+  responseEncoding?: ResponseEncoding | string;
   xsrfCookieName?: string;
   xsrfHeaderName?: string;
   onUploadProgress?: (progressEvent: AxiosProgressEvent) => void;
